@@ -1,0 +1,92 @@
+/* 90년대 웹 스타일 - 브라우저 기본값 최대 활용 */
+
+body {
+    font-family: serif; /* Times New Roman 계열 */
+    margin: 8px;
+    background: white;
+    color: black;
+}
+
+/* 기본 링크 색상 유지 (파란색/보라색) */
+a:link {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    background: yellow;
+}
+
+/* 기본 제목 스타일 */
+h1, h2, h3 {
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+/* 기본 목록 스타일 */
+ul {
+    margin: 1em 0;
+    padding-left: 40px;
+}
+
+li {
+    margin: 0.25em 0;
+}
+
+/* 구분선 */
+hr {
+    margin: 1em 0;
+    border: none;
+    border-top: 1px solid black;
+}
+
+/* 작은 텍스트 */
+small {
+    font-size: smaller;
+}
+
+/* 테이블 (필요시) */
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 2px 4px;
+    text-align: left;
+}
+
+/* 폼 요소들 (방명록용) */
+input, textarea {
+    font-family: serif;
+    font-size: 12px;
+    border: 1px solid black;
+}
+
+input[type="submit"] {
+    background: #c0c0c0;
+    border: 2px outset #c0c0c0;
+    padding: 2px 6px;
+}
+
+/* 90년대 카운터 스타일 */
+.counter {
+    background: black;
+    color: lime;
+    font-family: monospace;
+    padding: 2px;
+    font-size: 12px;
+}

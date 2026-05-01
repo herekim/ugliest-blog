@@ -17,5 +17,36 @@
 <li><a href="posts/thoughts/90s-nostalgia.html">90년대 개인홈피 그 시절</a></li>
 </ul>
 
+<div class="comments">
+    <div class="comment-form">
+        <textarea placeholder="한마디 남기기..." id="comment-text"></textarea>
+        <button onclick="sendComment()">보내기</button>
+    </div>
+</div>
+
+<div class="footer">
+    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><br>
+    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><br>
+    © 2026 herekim
+</div>
+
+<script>
+function sendComment() {
+    const text = document.getElementById('comment-text').value.trim();
+    if (text) {
+        const subject = encodeURIComponent('희열 블로그 댓글');
+        const body = encodeURIComponent(text);
+        window.location.href = `mailto:herekim@yplabs.kr?subject=${subject}&body=${body}`;
+        document.getElementById('comment-text').value = '';
+    }
+}
+
+document.getElementById('comment-text').addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+        sendComment();
+    }
+});
+</script>
+
 </body>
 </html>

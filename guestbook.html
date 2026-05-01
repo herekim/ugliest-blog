@@ -3,107 +3,47 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>방명록 - hereiam</title>
+<meta name="author" content="herekim">
+<title>희열 - 방명록</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<h1>방명록</h1>
-<p>한마디 남겨주세요.</p>
+<h1><a href="index.html">희열</a></h1>
 
-<div class="nav">
-[ <a href="index.html">홈</a> |
-<a href="about.html">자기소개</a> |
-<a href="posts/">일기장</a> |
-<a href="links.html">즐겨찾기</a> |
-<a href="guestbook.html">방명록</a> ]
-</div>
-
-<hr>
-
-<h2>한마디 남기기</h2>
-
-<p>이 홈피는 정적 페이지라서 진짜 방명록은 못 만들었어요. 대신 이메일로 보내주시면 제가 손으로 직접 적어드릴게요.</p>
-
-<p>이메일: <a href="mailto:herekim@yplabs.kr?subject=방명록 메시지">herekim@yplabs.kr</a></p>
-
-<form action="mailto:herekim@yplabs.kr" method="post" enctype="text/plain">
-<table>
-<tr>
-<td><label for="name">이름</label></td>
-<td><input type="text" id="name" name="name" size="30" placeholder="익명 가능"></td>
-</tr>
-<tr>
-<td><label for="email">이메일</label></td>
-<td><input type="email" id="email" name="email" size="30" placeholder="답장 받을 때만"></td>
-</tr>
-<tr>
-<td><label for="website">홈페이지</label></td>
-<td><input type="url" id="website" name="website" size="30" placeholder="http://"></td>
-</tr>
-<tr>
-<td valign="top"><label for="message">한마디</label></td>
-<td><textarea id="message" name="message" rows="6" cols="40" placeholder="자유롭게 한마디 남겨주세요"></textarea></td>
-</tr>
-<tr>
-<td></td>
-<td><input type="submit" value="보내기"> <input type="reset" value="다시쓰기"></td>
-</tr>
-</table>
-</form>
-
-<p><small>보내기를 누르면 메일 프로그램이 열립니다.</small></p>
-
-<hr>
-
-<h2>그동안 받은 한마디들</h2>
-
-<p><b>2026년 5월 2일 (토) - herekim</b> <small>(homepage owner)</small></p>
-<blockquote>
-<p>드디어 hereiam 홈페이지 오픈했어요. seoul.craigslist.org 보고 영감받아서 만들었습니다. 90년대 그 시절의 순수함을 다시 느껴보고 싶어요. 앞으로 잘 부탁드려요.</p>
-</blockquote>
-
-<h2>한마디 남길 때 부탁</h2>
-
-<p><b>이런 한마디 환영해요</b></p>
-<ul>
-<li>홈피 보고 든 생각</li>
-<li>90년대 웹 추억담</li>
-<li>비슷한 홈피 추천</li>
-<li>친구 등록 신청</li>
-<li>그냥 인사도 좋아요</li>
-</ul>
-
-<p><b>이런 건 사양해요</b></p>
-<ul>
-<li>광고, 홍보</li>
-<li>스팸</li>
-<li>욕설, 비방</li>
-<li>정치 싸움</li>
-</ul>
-
-<h2>안내</h2>
-
-<ul>
-<li>한마디는 검토 후 올려드려요.</li>
-<li>개인정보는 공개하지 않아요.</li>
-<li>친구 신청 환영합니다.</li>
-<li>HTML 태그는 사용할 수 없어요 (보안).</li>
-</ul>
-
-<hr>
-
-<div class="nav">
-[ <a href="index.html">홈</a> |
-<a href="about.html">자기소개</a> |
-<a href="posts/">일기장</a> |
-<a href="links.html">즐겨찾기</a> |
-<a href="guestbook.html">방명록</a> ]
+<div class="comments">
+    <div class="comment-form">
+        <input type="text" id="guest-name" placeholder="이름 (선택)" style="width: 100%; font-family: inherit; font-size: 11px; padding: 6px; border: 1px solid var(--border); border-radius: 3px; margin-bottom: 8px; box-sizing: border-box;">
+        <textarea placeholder="방명록에 남길 말..." id="guestbook-text"></textarea>
+        <button onclick="sendGuestbook()">방명록 남기기</button>
+    </div>
 </div>
 
 <div class="footer">
-<p>방명록 문화를 다시 살려봅시다.</p>
+    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><br>
+    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><br>
+    © 2026 herekim
 </div>
+
+<script>
+function sendGuestbook() {
+    const name = document.getElementById('guest-name').value.trim() || '익명';
+    const text = document.getElementById('guestbook-text').value.trim();
+    if (text) {
+        const subject = encodeURIComponent('희열 블로그 방명록');
+        const body = encodeURIComponent(`이름: ${name}\n\n${text}`);
+        window.location.href = `mailto:herekim@yplabs.kr?subject=${subject}&body=${body}`;
+        document.getElementById('guest-name').value = '';
+        document.getElementById('guestbook-text').value = '';
+    }
+}
+
+document.getElementById('guestbook-text').addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+        sendGuestbook();
+    }
+});
+</script>
 
 </body>
 </html>

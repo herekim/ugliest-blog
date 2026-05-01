@@ -1,92 +1,343 @@
-/* 90년대 웹 스타일 - 브라우저 기본값 최대 활용 */
+/* ============================================ */
+/* hereiam - 1996 Personal Homepage              */
+/* Best viewed in Netscape Navigator 4.0         */
+/* Resolution: 800x600                            */
+/* ============================================ */
 
 body {
-    font-family: serif; /* Times New Roman 계열 */
-    margin: 8px;
-    background: white;
-    color: black;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #c0c0c0;
+    color: #000000;
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
 }
 
-/* 기본 링크 색상 유지 (파란색/보라색) */
+/* 본문 컨테이너 - 90년대식 가운데 정렬 */
+body > * {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 링크 색상 - 절대 바꾸지 말 것 */
 a:link {
-    color: blue;
+    color: #0000ff;
     text-decoration: underline;
 }
 
 a:visited {
-    color: purple;
+    color: #800080;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff0000;
 }
 
 a:hover {
-    background: yellow;
+    background-color: #ffff00;
+    color: #ff0000;
 }
 
-/* 기본 제목 스타일 */
-h1, h2, h3 {
-    font-weight: bold;
-    margin: 1em 0;
-}
-
+/* 제목 - 굵고 못생기게 */
 h1 {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000;
+    margin: 4px 0;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 2px 2px 0px #ffff00;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000080;
+    background-color: #ffff00;
+    padding: 2px 6px;
+    margin: 12px 0 6px 0;
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    display: inline-block;
 }
 
-/* 기본 목록 스타일 */
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #008000;
+    margin: 8px 0 4px 0;
+}
+
+h3::before {
+    content: ">> ";
+    color: #ff0000;
+}
+
+/* 목록 */
 ul {
-    margin: 1em 0;
-    padding-left: 40px;
+    margin: 6px 0;
+    padding-left: 30px;
+    list-style-type: square;
+}
+
+ol {
+    margin: 6px 0;
+    padding-left: 30px;
 }
 
 li {
-    margin: 0.25em 0;
+    margin: 2px 0;
 }
 
-/* 구분선 */
+/* 구분선 - 무지개 효과 */
 hr {
-    margin: 1em 0;
+    height: 4px;
     border: none;
-    border-top: 1px solid black;
+    background: linear-gradient(to right, #ff0000, #ff8800, #ffff00, #00ff00, #0000ff, #8800ff);
+    margin: 8px 0;
 }
 
-/* 작은 텍스트 */
-small {
-    font-size: smaller;
+/* 깜빡이는 NEW 라벨 */
+.blink {
+    animation: blink 1s steps(1) infinite;
+    color: #ff0000;
+    font-weight: bold;
 }
 
-/* 테이블 (필요시) */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* 방문자 카운터 */
+.counter {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border: 2px inset #c0c0c0;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+
+/* Win95 박스 */
+.box {
+    background-color: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+.box-inset {
+    background-color: #ffffff;
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+/* 공사중 박스 */
+.under-construction {
+    background-color: #ffff00;
+    border: 4px dashed #ff0000;
+    padding: 12px;
+    text-align: center;
+    margin: 8px 0;
+    font-weight: bold;
+    color: #000000;
+}
+
+.under-construction::before {
+    content: "[!] ";
+    color: #ff0000;
+    font-size: 20px;
+}
+
+.under-construction::after {
+    content: " [!]";
+    color: #ff0000;
+    font-size: 20px;
+}
+
+/* ASCII 아트 영역 */
+pre.ascii {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    line-height: 1.1;
+    color: #000080;
+    background-color: transparent;
+    text-align: center;
+    margin: 8px 0;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* marquee 폴백 (브라우저가 marquee를 지원 안 할 경우 대비) */
+marquee {
+    background-color: #000080;
+    color: #ffff00;
+    font-weight: bold;
+    padding: 4px;
+    border: 2px ridge #ffffff;
+}
+
+/* blockquote */
+blockquote {
+    background-color: #ffffe0;
+    border-left: 4px solid #ff0000;
+    border-right: 4px solid #ff0000;
+    padding: 8px 12px;
+    margin: 8px 16px;
+    font-style: italic;
+}
+
+/* 표 */
 table {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 2px ridge #c0c0c0;
+    background-color: #ffffff;
+    margin: 8px 0;
 }
 
 td, th {
-    border: 1px solid black;
-    padding: 2px 4px;
+    border: 1px solid #000000;
+    padding: 4px 8px;
     text-align: left;
 }
 
-/* 폼 요소들 (방명록용) */
-input, textarea {
-    font-family: serif;
-    font-size: 12px;
-    border: 1px solid black;
+th {
+    background-color: #000080;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-input[type="submit"] {
-    background: #c0c0c0;
-    border: 2px outset #c0c0c0;
-    padding: 2px 6px;
+/* 폼 - Win95 룩 */
+input, textarea, select {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 2px 4px;
 }
 
-/* 90년대 카운터 스타일 */
-.counter {
-    background: black;
-    color: lime;
-    font-family: monospace;
-    padding: 2px;
-    font-size: 12px;
+input[type="submit"], input[type="button"], button {
+    background-color: #c0c0c0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+    padding: 4px 12px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:active, input[type="button"]:active, button:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* 네비게이션 바 */
+.navbar {
+    background-color: #000080;
+    color: #ffffff;
+    padding: 6px 8px;
+    text-align: center;
+    border: 2px ridge #ffffff;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.navbar a:link, .navbar a:visited {
+    color: #ffff00;
+    text-decoration: none;
+    padding: 0 4px;
+}
+
+.navbar a:hover {
+    background-color: #ffff00;
+    color: #000080;
+}
+
+/* 작은 글씨 */
+small {
+    font-size: 11px;
+    color: #404040;
+}
+
+/* 이메일 강조 */
+.email {
+    background-color: #ffff00;
+    padding: 1px 4px;
+    border: 1px solid #000000;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+/* 별표 장식 */
+.stars {
+    color: #ff8800;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* HOT! 라벨 */
+.hot {
+    background-color: #ff0000;
+    color: #ffff00;
+    font-weight: bold;
+    padding: 1px 4px;
+    font-size: 11px;
+    border: 1px solid #000000;
+    animation: blink 1.2s steps(1) infinite;
+}
+
+/* NEW! 라벨 */
+.new {
+    background-color: #00ff00;
+    color: #ff0000;
+    font-weight: bold;
+    padding: 1px 4px;
+    font-size: 11px;
+    border: 1px solid #000000;
+    animation: blink 0.8s steps(1) infinite;
+}
+
+/* 사이트맵 박스 */
+.sitemap {
+    background-color: #ffffe0;
+    border: 3px double #000000;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+/* 푸터 */
+.footer {
+    text-align: center;
+    margin-top: 16px;
+    padding: 8px;
+    border-top: 4px ridge #c0c0c0;
+    font-size: 11px;
+    color: #404040;
+}
+
+/* 본문 단락 */
+p {
+    margin: 6px 0;
+    line-height: 1.4;
 }

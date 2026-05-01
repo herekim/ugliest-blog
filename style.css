@@ -1,319 +1,61 @@
-/* hereiam - sophisticated retro personal homepage
-   세련된 90년대 감성. 빈티지하지만 읽기 편하게. */
+/* 희열 - 극도 미니멀 */
 
-/* Google Fonts 임포트 */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
-/* 색상 변수 */
 :root {
-    --bg-cream: #faf8f5;
-    --text-charcoal: #2a2a2a;
-    --text-medium: #4a4a4a;
-    --text-light: #666666;
-    --accent-beige: #e6ddd4;
-    --accent-mustard: #d4af37;
-    --accent-olive: #8b956d;
-    --accent-rose: #c4969a;
-    --border-soft: #d0c7b8;
-    --link-blue: #2563eb;
-    --link-visited: #7c3aed;
-    --link-hover: #1d4ed8;
+    --accent: #6366f1;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
 }
 
-/* 종이 질감 배경 */
 body {
-    font-family: "Crimson Text", "Times New Roman", "Georgia", serif;
-    background-color: var(--bg-cream);
-    background-image:
-        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
-    background-size: 20px 20px;
-    color: var(--text-charcoal);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--text);
+    background: #ffffff;
     margin: 0;
-    padding: 24px;
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 720px;
-    margin: 0 auto;
+    padding: 40px;
+    max-width: 480px;
     letter-spacing: 0.01em;
 }
 
-/* 메인 콘텐츠 컨테이너 */
-body > * {
-    background-color: var(--bg-cream);
-    position: relative;
-}
-
-/* 링크: 세련된 색상 */
-a:link {
-    color: var(--link-blue);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-a:visited {
-    color: var(--link-visited);
-}
-a:hover {
-    color: var(--link-hover);
-    text-decoration-thickness: 2px;
-    transition: all 0.2s ease;
-}
-a:active {
-    color: var(--accent-mustard);
-}
-
-/* 타이포그래피 계층 */
 h1 {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.2;
-    margin: 32px 0 16px 0;
-    color: var(--text-charcoal);
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 32px 0;
+    color: var(--accent);
     letter-spacing: -0.02em;
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.05);
 }
 
-h2 {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 28px 0 12px 0;
-    color: var(--text-charcoal);
-    letter-spacing: -0.01em;
-    padding-bottom: 4px;
-    border-bottom: 2px solid var(--accent-beige);
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 24px 0 8px 0;
-    color: var(--text-medium);
-    letter-spacing: -0.005em;
-}
-
-/* 본문 요소들 */
-p {
-    margin: 12px 0;
-    text-align: justify;
-    hyphens: auto;
-}
-
-ul, ol {
-    margin: 12px 0;
-    padding-left: 32px;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
-    margin: 6px 0;
-    line-height: 1.6;
+    margin: 0 0 8px 0;
 }
 
-/* 인용문: 우아한 스타일링 */
-blockquote {
-    margin: 24px 0;
-    padding: 16px 0 16px 24px;
-    border-left: 4px solid var(--accent-olive);
-    background: linear-gradient(90deg,
-        rgba(139, 149, 109, 0.08) 0%,
-        rgba(139, 149, 109, 0.02) 100%);
-    color: var(--text-medium);
-    font-style: italic;
-    position: relative;
-}
-
-blockquote::before {
-    content: '"';
-    position: absolute;
-    left: -4px;
-    top: -8px;
-    font-size: 48px;
-    color: var(--accent-olive);
-    opacity: 0.3;
-    font-family: serif;
-}
-
-/* 구분선: 미묘한 스타일 */
-hr {
-    border: none;
-    height: 1px;
-    background: linear-gradient(90deg,
-        transparent 0%,
-        var(--border-soft) 20%,
-        var(--border-soft) 80%,
-        transparent 100%);
-    margin: 32px 0;
-    position: relative;
-}
-
-hr::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background: var(--accent-rose);
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px var(--bg-cream);
-}
-
-/* 표: 깔끔한 디자인 */
-table {
-    border-collapse: collapse;
-    margin: 16px 0;
-    width: 100%;
-    background: rgba(255,255,255,0.4);
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-td, th {
-    padding: 12px 16px;
-    text-align: left;
-    vertical-align: top;
-    border-bottom: 1px solid var(--accent-beige);
-}
-
-th {
-    font-weight: 600;
-    background: var(--accent-beige);
-    color: var(--text-charcoal);
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-/* 폼: 세련된 스타일 */
-input, textarea {
-    font-family: "Crimson Text", "Times New Roman", "Georgia", serif;
-    font-size: 16px;
-    padding: 8px 12px;
-    border: 2px solid var(--accent-beige);
-    border-radius: 4px;
-    background: var(--bg-cream);
-    color: var(--text-charcoal);
-    transition: border-color 0.2s ease;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--accent-olive);
-    box-shadow: 0 0 0 3px rgba(139, 149, 109, 0.1);
-}
-
-input[type="submit"], input[type="reset"] {
-    background: var(--accent-mustard);
-    color: var(--text-charcoal);
-    border: 2px solid var(--accent-mustard);
-    font-weight: 600;
-    cursor: pointer;
-    padding: 10px 20px;
-}
-
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background: var(--bg-cream);
-    color: var(--accent-mustard);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* 작은 글씨 */
-small {
-    font-size: 15px;
-    color: var(--text-light);
-    line-height: 1.5;
-}
-
-/* 네비게이션: 세련된 브래킷 스타일 */
-.nav,
-.navbar,
-div:has(a[href="index.html"]) {
-    margin: 16px 0;
-    padding: 12px 16px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 6px;
-    border: 1px solid var(--accent-beige);
-    text-align: center;
-    font-size: 16px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.nav a,
-.navbar a {
-    margin: 0 8px;
-    font-weight: 400;
-    transition: all 0.2s ease;
-}
-
-.nav a:hover,
-.navbar a:hover {
-    background: var(--accent-beige);
-    padding: 4px 8px;
-    border-radius: 3px;
+a {
+    color: var(--text);
     text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.15s ease;
 }
 
-/* 푸터 */
-.footer,
-div[style*="center"]:last-child,
-center:last-child {
-    margin-top: 48px;
-    padding-top: 16px;
-    border-top: 2px solid var(--accent-beige);
-    font-size: 15px;
+a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+a:visited {
     color: var(--text-light);
-    text-align: center;
-    background: linear-gradient(180deg,
-        transparent 0%,
-        rgba(255,255,255,0.2) 100%);
-    border-radius: 0 0 8px 8px;
-    padding: 24px 16px;
 }
 
-/* 특별한 요소들 */
-.stars {
-    color: var(--accent-mustard);
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin: 8px 0;
-}
-
-/* 90년대 테마를 유지하되 세련되게 */
-pre {
-    font-family: monospace;
-    background: var(--accent-beige);
-    padding: 16px;
-    border-radius: 4px;
-    overflow-x: auto;
-    border-left: 4px solid var(--accent-olive);
-}
-
-/* 반응형 */
-@media (max-width: 768px) {
-    body {
-        padding: 16px;
-        font-size: 17px;
-    }
-
-    h1 { font-size: 28px; }
-    h2 { font-size: 22px; }
-    h3 { font-size: 18px; }
-
-    .nav, .navbar {
-        font-size: 15px;
-    }
-
-    table {
-        font-size: 15px;
-    }
-
-    td, th {
-        padding: 8px 12px;
-    }
+a:visited:hover {
+    color: var(--accent);
 }

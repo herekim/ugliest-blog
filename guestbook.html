@@ -9,20 +9,31 @@
 </head>
 <body>
 
-<h1><a href="index.html">희열</a></h1>
+<h1><a href="index.html" style="text-decoration: none; color: inherit;">희열</a></h1>
+<div class="tagline">작은 개인 홈페이지</div>
 
-<div class="comments">
-    <div class="comment-form">
-        <input type="text" id="guest-name" placeholder="이름 (선택)" style="width: 100%; font-family: inherit; font-size: 11px; padding: 6px; border: 1px solid var(--border); border-radius: 3px; margin-bottom: 8px; box-sizing: border-box;">
-        <textarea placeholder="방명록에 남길 말..." id="guestbook-text"></textarea>
-        <button onclick="sendGuestbook()">방명록 남기기</button>
-    </div>
+<nav class="nav">
+    <a href="index.html">홈</a><span>·</span>
+    <a href="about.html">자기소개</a><span>·</span>
+    <a href="posts/">일기장</a><span>·</span>
+    <a href="links.html">즐겨찾기</a><span>·</span>
+    <a href="guestbook.html">방명록</a>
+</nav>
+
+<hr>
+
+<div class="comment-form">
+    <input type="text" id="guest-name" placeholder="이름 (선택)">
+    <textarea placeholder="방명록에 남길 말..." id="guestbook-text"></textarea>
+    <button onclick="sendGuestbook()">방명록 남기기</button>
 </div>
 
+<hr>
+
 <div class="footer">
-    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><br>
-    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><br>
-    © 2026 herekim
+    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><span>·</span>
+    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><span>·</span>
+    © 2026
 </div>
 
 <script>

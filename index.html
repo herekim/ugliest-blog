@@ -10,24 +10,44 @@
 <body>
 
 <h1>희열</h1>
+<div class="tagline">작은 개인 홈페이지</div>
 
-<ul>
-<li><a href="posts/business/why-ugly.html">이 홈피가 못생긴 이유</a></li>
-<li><a href="posts/life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a></li>
-<li><a href="posts/thoughts/90s-nostalgia.html">90년대 개인홈피 그 시절</a></li>
+<nav class="nav">
+    <a href="index.html">홈</a><span>·</span>
+    <a href="about.html">자기소개</a><span>·</span>
+    <a href="posts/">일기장</a><span>·</span>
+    <a href="links.html">즐겨찾기</a><span>·</span>
+    <a href="guestbook.html">방명록</a>
+</nav>
+
+<hr>
+
+<ul class="post-list">
+    <li>
+        · <a href="posts/business/why-ugly.html">이 홈피가 못생긴 이유</a>
+        <div class="post-meta">사업 · 5월 2일</div>
+    </li>
+    <li>
+        · <a href="posts/life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a>
+        <div class="post-meta">일상 · 5월 2일</div>
+    </li>
+    <li>
+        · <a href="posts/thoughts/90s-nostalgia.html">90년대 개인홈피 그 시절</a>
+        <div class="post-meta">생각 · 5월 2일</div>
+    </li>
 </ul>
 
-<div class="comments">
-    <div class="comment-form">
-        <textarea placeholder="한마디 남기기..." id="comment-text"></textarea>
-        <button onclick="sendComment()">보내기</button>
-    </div>
+<div class="comment-form">
+    <textarea placeholder="한마디 남기기..." id="comment-text"></textarea>
+    <button onclick="sendComment()">보내기</button>
 </div>
 
+<hr>
+
 <div class="footer">
-    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><br>
-    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><br>
-    © 2026 herekim
+    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><span>·</span>
+    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><span>·</span>
+    © 2026
 </div>
 
 <script>

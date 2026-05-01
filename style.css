@@ -4,6 +4,7 @@
    ========================================================== */
 
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700&display=swap');
 
 /* ----- Tokens ----- */
 :root {
@@ -18,9 +19,10 @@
     --accent:     #0f4c81;   /* Classic Blue (Pantone 19-4052) */
     --accent-soft:#355c9c;
 
-    /* Type — standard serif, no display fonts */
+    /* Type — Korean Myeongjo first, Latin serif companions
+       Browser uses per-glyph fallback: Latin → Georgia, Hangul → Noto Serif KR */
     --sans:   "Pretendard", -apple-system, BlinkMacSystemFont, "SF Pro KR", system-ui, sans-serif;
-    --serif:  Georgia, "Times New Roman", "Apple SD Gothic Neo", "Nanum Myeongjo", serif;
+    --serif:  Georgia, "Noto Serif KR", "Nanum Myeongjo", "Apple SD Gothic Neo", "Times New Roman", serif;
     --mono:   "SF Mono", ui-monospace, Menlo, monospace;
 
     /* Scale — smaller, quieter */
@@ -58,7 +60,9 @@ body {
     color: var(--ink);
     font-family: var(--serif);
     font-size: var(--fs-lg);
-    line-height: 1.7;
+    line-height: 1.8;
+    letter-spacing: -0.005em;
+    word-break: keep-all;
     text-align: left;
 }
 
@@ -226,7 +230,8 @@ body {
 .prose {
     font-family: var(--serif);
     font-size: var(--fs-lg);
-    line-height: 1.75;
+    line-height: 1.85;
+    letter-spacing: -0.005em;
     color: var(--ink-soft);
     max-width: var(--measure-tight);
 }

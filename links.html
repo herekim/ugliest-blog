@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="herekim">
-<title>희열 - 즐겨찾기</title>
+<title>읽을거리 · 희열</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<h1><a href="index.html" style="text-decoration: none; color: inherit;">희열</a></h1>
-<div class="tagline">작은 개인 홈페이지</div>
+<main class="page">
 
-<nav class="nav">
-    <a href="index.html">홈</a><span>·</span>
-    <a href="about.html">자기소개</a><span>·</span>
-    <a href="posts/">일기장</a><span>·</span>
-    <a href="links.html">즐겨찾기</a><span>·</span>
-    <a href="guestbook.html">방명록</a>
-</nav>
+    <header class="masthead">
+        <h1 class="masthead__name"><a href="index.html">희열</a></h1>
+        <p class="masthead__tagline">사업과 일상, 그 사이의 <em>생각들</em>.</p>
+    </header>
 
-<hr>
+    <nav class="nav" aria-label="primary">
+        <a href="index.html">글</a>
+        <a href="about.html">소개</a>
+        <a href="links.html" aria-current="page">읽을거리</a>
+        <a href="guestbook.html">방명록</a>
+    </nav>
 
-<ul class="post-list">
-    <li>· <a href="https://seoul.craigslist.org/" target="_blank">seoul.craigslist.org</a></li>
-    <li>· <a href="https://bzcf.io/" target="_blank">bzcf.io</a></li>
-    <li>· <a href="https://mobbin.com/" target="_blank">mobbin.com</a></li>
-    <li>· <a href="https://berkshirehathaway.com/" target="_blank">berkshirehathaway.com</a></li>
-    <li>· <a href="https://web.archive.org/" target="_blank">Internet Archive</a></li>
-    <li>· <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></li>
-</ul>
 
-<hr>
+    <footer class="colophon">
+        <div class="colophon__group">
+            <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a>
+            <a href="https://instagram.com/herekim_" target="_blank" rel="noopener">@herekim_</a>
+        </div>
+        <div>© 2026 Heeyeol</div>
+    </footer>
 
-<div class="footer">
-    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><span>·</span>
-    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><span>·</span>
-    © 2026
-</div>
+</main>
 
 </body>
 </html>

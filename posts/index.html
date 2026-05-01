@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="herekim">
-<title>희열 - 일기장</title>
+<title>글 · 희열</title>
 <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 
-<h1><a href="../index.html" style="text-decoration: none; color: inherit;">희열</a></h1>
-<div class="tagline">작은 개인 홈페이지</div>
+<main class="page">
 
-<nav class="nav">
-    <a href="../index.html">홈</a><span>·</span>
-    <a href="../about.html">자기소개</a><span>·</span>
-    <a href="../posts/">일기장</a><span>·</span>
-    <a href="../links.html">즐겨찾기</a><span>·</span>
-    <a href="../guestbook.html">방명록</a>
-</nav>
+    <header class="masthead">
+        <h1 class="masthead__name"><a href="../index.html">희열</a></h1>
+        <p class="masthead__tagline">사업과 일상, 그 사이의 <em>생각들</em>.</p>
+    </header>
 
-<hr>
+    <nav class="nav" aria-label="primary">
+        <a href="../index.html" aria-current="page">글</a>
+        <a href="../about.html">소개</a>
+        <a href="../links.html">읽을거리</a>
+        <a href="../guestbook.html">방명록</a>
+    </nav>
 
-<ul class="post-list">
-    <li>
-        · <a href="business/why-ugly.html">이 홈피가 못생긴 이유</a>
-        <div class="post-meta">사업 · 5월 2일</div>
-    </li>
-    <li>
-        · <a href="life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a>
-        <div class="post-meta">일상 · 5월 2일</div>
-    </li>
-    <li>
-        · <a href="thoughts/90s-nostalgia.html">90년대 개인홈피 그 시절</a>
-        <div class="post-meta">생각 · 5월 2일</div>
-    </li>
-</ul>
 
-<hr>
+    <footer class="colophon">
+        <div class="colophon__group">
+            <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a>
+            <a href="https://instagram.com/herekim_" target="_blank" rel="noopener">@herekim_</a>
+        </div>
+        <div>© 2026 Heeyeol</div>
+    </footer>
 
-<div class="footer">
-    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><span>·</span>
-    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><span>·</span>
-    © 2026
-</div>
+</main>
 
 </body>
 </html>

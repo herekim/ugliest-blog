@@ -1,72 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="herekim">
+<meta name="description" content="희열 — 사업과 일상, 그리고 그 사이의 생각들.">
 <title>희열</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-<h1>희열</h1>
-<div class="tagline">작은 개인 홈페이지</div>
+<main class="page">
 
-<nav class="nav">
-    <a href="index.html">홈</a><span>·</span>
-    <a href="about.html">자기소개</a><span>·</span>
-    <a href="posts/">일기장</a><span>·</span>
-    <a href="links.html">즐겨찾기</a><span>·</span>
-    <a href="guestbook.html">방명록</a>
-</nav>
+    <header class="masthead">
+        <h1 class="masthead__name"><a href="index.html">희열</a></h1>
+        <p class="masthead__tagline">사업과 일상, 그 사이의 <em>생각들</em>.</p>
+    </header>
 
-<hr>
+    <nav class="nav" aria-label="primary">
+        <a href="index.html" aria-current="page">글</a>
+        <a href="about.html">소개</a>
+        <a href="links.html">읽을거리</a>
+        <a href="guestbook.html">방명록</a>
+    </nav>
 
-<ul class="post-list">
-    <li>
-        · <a href="posts/business/why-ugly.html">이 홈피가 못생긴 이유</a>
-        <div class="post-meta">사업 · 5월 2일</div>
-    </li>
-    <li>
-        · <a href="posts/life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a>
-        <div class="post-meta">일상 · 5월 2일</div>
-    </li>
-    <li>
-        · <a href="posts/thoughts/90s-nostalgia.html">90년대 개인홈피 그 시절</a>
-        <div class="post-meta">생각 · 5월 2일</div>
-    </li>
-</ul>
+    <section aria-labelledby="recent">
+        <div class="section-head">
+            <span class="section-head__label" id="recent">2026</span>
+            <span class="section-head__rule"></span>
+        </div>
 
-<div class="comment-form">
-    <textarea placeholder="한마디 남기기..." id="comment-text"></textarea>
-    <button onclick="sendComment()">보내기</button>
-</div>
+        <ol class="entries">
+            <li class="entry">
+                <span class="entry__date">May 02</span>
+                <a class="entry__title" href="posts/business/why-ugly.html">이 홈피가 못생긴 이유</a>
+                <span class="entry__cat">사업</span>
+            </li>
+            <li class="entry">
+                <span class="entry__date">May 02</span>
+                <a class="entry__title" href="posts/life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a>
+                <span class="entry__cat">일상</span>
+            </li>
+            <li class="entry">
+                <span class="entry__date">May 02</span>
+                <a class="entry__title" href="posts/thoughts/90s-nostalgia.html">90년대 개인홈피, 그 시절</a>
+                <span class="entry__cat">생각</span>
+            </li>
+        </ol>
+    </section>
 
-<hr>
 
-<div class="footer">
-    <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a><span>·</span>
-    <a href="https://instagram.com/herekim_" target="_blank">@herekim_</a><span>·</span>
-    © 2026
-</div>
+    <footer class="colophon">
+        <div class="colophon__group">
+            <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a>
+            <a href="https://instagram.com/herekim_" target="_blank" rel="noopener">@herekim_</a>
+        </div>
+        <div>© 2026 Heeyeol</div>
+    </footer>
 
-<script>
-function sendComment() {
-    const text = document.getElementById('comment-text').value.trim();
-    if (text) {
-        const subject = encodeURIComponent('희열 블로그 댓글');
-        const body = encodeURIComponent(text);
-        window.location.href = `mailto:herekim@yplabs.kr?subject=${subject}&body=${body}`;
-        document.getElementById('comment-text').value = '';
-    }
-}
+</main>
 
-document.getElementById('comment-text').addEventListener('keydown', function(e) {
-    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
-        sendComment();
-    }
-});
-</script>
 
 </body>
 </html>

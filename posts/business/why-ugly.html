@@ -1,113 +1,165 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>이 홈피가 못생긴 이유 - hereiam</title>
+<meta name="author" content="herekim">
+<title>이 홈피가 못생긴 이유 · 희열</title>
 <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 
-<h1>이 홈피가 못생긴 이유</h1>
+<main class="page">
 
-<div class="nav">
-[ <a href="../../index.html">홈</a> |
-<a href="../">일기장</a> |
-<a href="./">사업방</a> |
-<a href="../../guestbook.html">방명록</a> ]
-</div>
+    <header class="masthead">
+        <h1 class="masthead__name"><a href="../../index.html">희열</a></h1>
+        <p class="masthead__tagline">사업과 일상, 그 사이의 <em>생각들</em>.</p>
+    </header>
 
-<p><small>2026년 5월 2일 (토) | 사업방 | 키워드: 못생긴홈피, 사업, 웹디자인</small></p>
+    <nav class="nav" aria-label="primary">
+        <a href="../../index.html">글</a>
+        <a href="../../about.html">소개</a>
+        <a href="../../links.html">읽을거리</a>
+        <a href="../../guestbook.html">방명록</a>
+    </nav>
 
-<hr>
+    <article>
+        <header class="article-header">
+            <div class="article-header__cat">사업</div>
+            <h1 class="article-header__title">이 홈피가 못생긴 이유</h1>
+            <div class="article-header__meta">
+                <span>2026년 5월 2일</span>
+                <span>읽기 5분</span>
+            </div>
+        </header>
 
-<p>사업하다보면 늘 이런 소리 듣잖아요. "예쁘게 만드세요" "세련되게 해주세요" "요즘 트렌드는 이거에요".</p>
+        <div class="prose">
+            <p>사업하다 보면 늘 이런 소리를 듣습니다. <em>예쁘게 만드세요. 세련되게 해주세요. 요즘 트렌드는 이거에요.</em></p>
 
-<p>홈페이지든 앱이든 제품이든 다 인스타그램에 올릴만한 비주얼이 되어야 한대요. 근데 진짜 그래야 하는걸까요.</p>
+            <p>홈페이지든 앱이든 제품이든, 인스타그램에 올릴 만한 비주얼이 되어야 한다고. 정말 그래야 하는 걸까요.</p>
 
-<h2>크레이그리스트 충격사건</h2>
+            <h2>크레이그리스트 충격</h2>
 
-<p>몇년 전에 처음 seoul.craigslist.org 봤을 때 진짜 충격이었어요.</p>
+            <p>몇 년 전 처음 <a href="https://seoul.craigslist.org" target="_blank" rel="noopener">seoul.craigslist.org</a>를 봤을 때 충격이었습니다. 2026년인데도 90년대 그 모습 그대로. HTML 표만 가득하고, 링크는 그냥 파란색이고, 글꼴은 Times New Roman, 여백도 거의 없는.</p>
 
-<p>2026년인데도 90년대 그때 그 모습 그대로. HTML 표만 가득하고, 링크는 그냥 파란색이고, 글꼴은 Times New Roman이고, 여백도 거의 없고.</p>
+            <p>그런데 이상하게도—</p>
 
-<p>근데 이상하게.</p>
+            <ul>
+                <li>로딩이 진짜 빠릅니다. 1초도 안 걸립니다.</li>
+                <li>찾고 싶은 정보가 잘 보입니다.</li>
+                <li>핸드폰에서도 잘 돌아갑니다.</li>
+                <li>서버비도 거의 안 나올 겁니다.</li>
+                <li>사람들이 계속 씁니다.</li>
+            </ul>
 
-<ul>
-<li>로딩이 진짜 빨라요. 1초도 안 걸려요.</li>
-<li>찾고싶은 정보가 잘 보여요.</li>
-<li>핸드폰에서도 잘 돌아가요.</li>
-<li>서버비도 거의 안 나올 거에요.</li>
-<li>사람들이 계속 써요.</li>
-</ul>
+            <p>이게 사업의 본질 아닌가 싶었습니다.</p>
 
-<p>이게 사업의 본질 아닌가 싶더라구요.</p>
+            <h2>디자인 너무함의 함정</h2>
 
-<h2>디자인 너무한 함정</h2>
+            <p>YPLabs에서 일하면서 느낀 건—</p>
 
-<p>YPLabs에서 일하면서 느낀 건요.</p>
+            <ol>
+                <li><strong>디자인 시간이 개발 시간보다 길어집니다.</strong> 피그마에서 완벽한 디자인 시스템 만든다고 몇 주씩 쓰고, 정작 진짜 기능은 뒷전이 됩니다.</li>
+                <li><strong>사용자는 예쁜 것보다 빠른 걸 원합니다.</strong> 아무리 예쁜 애니메이션도 3초 로딩은 못 이깁니다.</li>
+                <li><strong>나중에 고치는 게 지옥입니다.</strong> CSS 프레임워크 업데이트 할 때마다 화면이 깨집니다.</li>
+            </ol>
 
-<ol>
-<li><b>디자인 시간이 개발 시간보다 길어져요.</b> 피그마에서 완벽한 디자인 시스템 만든다고 몇 주씩 쓰고, 정작 진짜 기능은 뒷전이 되더라구요.</li>
-<li><b>사용자는 예쁜 것보다 빠른 걸 원해요.</b> 아무리 예쁜 애니메이션도 3초 로딩은 못 이겨요.</li>
-<li><b>나중에 고치는 게 지옥이에요.</b> CSS 프레임워크 업데이트 할 때마다 화면 깨지고.</li>
-</ol>
+            <h2>그래서 단정한 게 좋아요</h2>
 
-<h2>그래서 못생긴 게 좋아요</h2>
+            <p>이 홈피를 일부러 단정하게만 만든 이유입니다.</p>
 
-<p>이 홈피를 일부러 못생기게 만든 이유에요.</p>
+            <ul>
+                <li><strong>속도</strong> — CSS 파일이 작고, 그림도 거의 없습니다.</li>
+                <li><strong>접근성</strong> — 스크린리더, 옛날 브라우저 다 잘 됩니다.</li>
+                <li><strong>집중</strong> — 디자인 신경 안 쓰고 글에만 집중.</li>
+                <li><strong>솔직함</strong> — 과장 없이 진짜 이야기만.</li>
+                <li><strong>오래감</strong> — 10년 뒤에도 그대로 작동할 겁니다.</li>
+            </ul>
 
-<ul>
-<li><b>속도</b> - CSS 파일 작고, 그림도 없어요.</li>
-<li><b>접근성</b> - 스크린리더, 옛날 브라우저 다 잘 됩니다.</li>
-<li><b>집중</b> - 디자인 신경 안 쓰고 글에만 집중.</li>
-<li><b>솔직함</b> - 과장 없이 진짜 이야기만.</li>
-<li><b>오래감</b> - 10년 뒤에도 그대로 작동할 거에요.</li>
-</ul>
+            <h2>사업하면서 배운 것</h2>
 
-<h2>사업하면서 배운 것</h2>
+            <blockquote>
+                <p>완벽하지 않아도 괜찮습니다. 일단 돌아가면 됩니다.</p>
+            </blockquote>
 
-<p>못생긴 홈피 만들면서 배운 건요.</p>
+            <p>MVP라는 거, 결국 이런 거 아닐까요. 사용자가 진짜 원하는 핵심만 주는 것. 예쁘게 포장하는 건 그 다음입니다. 크레이그리스트가 수십 년 안 망한 이유도 여기에 있다고 생각합니다. 기능에 충실했고, 트렌드에 휩쓸리지 않았습니다.</p>
 
-<blockquote>
-<p>완벽 안 해도 돼요. 일단 돌아가면 돼요.</p>
-</blockquote>
+            <h2>결론</h2>
 
-<p>MVP라는 거 결국 이런 거 아닌가 싶어요. 사용자가 진짜 원하는 핵심만 주는 것. 예쁘게 포장하는 건 그 다음이에요.</p>
+            <p>이 홈피는 앞으로도 단정한 채로 갈 겁니다. 대신—</p>
 
-<p>크레이그리스트가 수십 년 안 망한 이유도 여기에 있어요. 기능에 충실했고, 트렌드에 안 휩쓸렸어요.</p>
+            <ul>
+                <li>글은 정성껏 쓰겠습니다.</li>
+                <li>정보는 정확하게 알려드리겠습니다.</li>
+                <li>화면은 단순하게 유지하겠습니다.</li>
+            </ul>
 
-<h2>결론</h2>
+            <p>때로는 절제된 게 더 아름답습니다.</p>
+        </div>
 
-<p>이 홈피는 앞으로도 못생긴 채로 갈 거에요. 대신.</p>
+        <aside class="related">
+            <div class="section-head">
+                <span class="section-head__label">함께 읽기</span>
+                <span class="section-head__rule"></span>
+            </div>
+            <ol class="entries">
+                <li class="entry">
+                    <span class="entry__date">May 02</span>
+                    <a class="entry__title" href="../life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a>
+                    <span class="entry__cat">일상</span>
+                </li>
+                <li class="entry">
+                    <span class="entry__date">May 02</span>
+                    <a class="entry__title" href="../thoughts/90s-nostalgia.html">90년대 개인홈피, 그 시절</a>
+                    <span class="entry__cat">생각</span>
+                </li>
+            </ol>
+        </aside>
+    </article>
 
-<ul>
-<li>글은 정성껏 쓸게요.</li>
-<li>정보는 정확하게 알려드릴게요.</li>
-<li>화면은 단순하게 유지할게요.</li>
-</ul>
+    <section aria-labelledby="comments" style="margin-top: var(--s-9);">
+        <div class="section-head">
+            <span class="section-head__label" id="comments">댓글</span>
+            <span class="section-head__rule"></span>
+        </div>
 
-<p>때로는 못생긴 게 더 예뻐요.</p>
+        <form class="form" onsubmit="sendComment(event)">
+            <div class="form__field">
+                <label class="form__label" for="comment-text">이 글에 대한 생각</label>
+                <textarea id="comment-text" placeholder="의견, 질문, 경험담 등 무엇이든."></textarea>
+            </div>
+            <button type="submit" class="form__submit">댓글 보내기</button>
+        </form>
+    </section>
 
-<hr>
+    <footer class="colophon">
+        <div class="colophon__group">
+            <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a>
+            <a href="https://instagram.com/herekim_" target="_blank" rel="noopener">@herekim_</a>
+        </div>
+        <div>© 2026 Heeyeol</div>
+    </footer>
 
-<h3>같이 보면 좋은 글</h3>
+</main>
 
-<ul>
-<li><a href="../life/craigslist-lesson.html">크레이그리스트에서 깨달은 것들</a></li>
-<li><a href="../thoughts/90s-nostalgia.html">90년대 개인홈피 그 시절</a></li>
-</ul>
+<script>
+function sendComment(e) {
+    if (e) e.preventDefault();
+    const text = document.getElementById('comment-text').value.trim();
+    if (text) {
+        const subject = encodeURIComponent('희열 블로그 댓글: 이 홈피가 못생긴 이유');
+        const body = encodeURIComponent(text);
+        window.location.href = `mailto:herekim@yplabs.kr?subject=${subject}&body=${body}`;
+        document.getElementById('comment-text').value = '';
+    }
+}
 
-<div class="nav">
-[ <a href="../../index.html">홈</a> |
-<a href="../">일기장</a> |
-<a href="./">사업방</a> |
-<a href="../../guestbook.html">방명록</a> ]
-</div>
-
-<div class="footer">
-<p>이 글이 좋으셨다면 <a href="mailto:herekim@yplabs.kr">herekim@yplabs.kr</a> 로 메일 주세요.</p>
-</div>
+document.getElementById('comment-text').addEventListener('keydown', function(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+        sendComment();
+    }
+});
+</script>
 
 </body>
 </html>
